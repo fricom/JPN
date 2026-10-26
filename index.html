@@ -1,27 +1,149 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>아이와 함께하는 일본 여행 일본어</title>
-    <meta name="description" content="3세 아이와 함께하는 일본 여행을 위한 실전 일본어 학습 공간" />
-    <style>
-      :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      * { box-sizing: border-box; }
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; color: #342c27; background: linear-gradient(145deg, #fff8ee, #f6e3dc); }
-      main { width: min(720px, 100%); padding: clamp(32px, 8vw, 72px); border: 1px solid rgba(94, 62, 49, .12); border-radius: 32px; background: rgba(255, 255, 255, .76); box-shadow: 0 24px 70px rgba(106, 67, 52, .12); }
-      .eyebrow { margin: 0 0 14px; color: #c45d43; font-size: 14px; font-weight: 700; letter-spacing: .08em; }
-      h1 { margin: 0; font-size: clamp(38px, 7vw, 64px); line-height: 1.08; letter-spacing: -.055em; }
-      p { margin: 24px 0 0; color: #725f55; font-size: clamp(17px, 2.6vw, 21px); line-height: 1.75; }
-      .tag { display: inline-block; margin-top: 30px; padding: 9px 14px; border-radius: 999px; color: #8b4d3a; background: #fce3d8; font-size: 14px; font-weight: 650; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <p class="eyebrow">FAMILY TRAVEL JAPANESE</p>
-      <h1>아이와 함께하는<br />일본 여행 일본어</h1>
-      <p>3세 아이와의 여행에서 실제로 마주치는 순간을 중심으로, 꼭 필요한 표현을 쉽고 편안하게 익히는 공간입니다.</p>
-      <span class="tag">콘텐츠를 준비하고 있어요</span>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f1e8" />
+  <title>아이와 함께하는 일본 여행 일본어</title>
+  <meta name="description" content="3세 아이와 일본을 여행할 때 바로 꺼내 쓰는 상황별 일본어 표현집" />
+  <style>
+    :root { color-scheme:light; --paper:#f7f1e8; --deep:#ede3d4; --ink:#1f2a27; --muted:#68716d; --line:#d9d0c2; --coral:#e36b4d; --coral-soft:#f9ddd3; --forest:#315f54; --forest-soft:#dce9e3; --yellow:#f1bd55; --white:#fffdf9; font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Noto Sans JP","Segoe UI",sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); }
+    button,input { font:inherit; } button { color:inherit; } a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
+    .topbar { position:sticky; top:0; z-index:20; border-bottom:1px solid rgba(49,95,84,.13); background:rgba(247,241,232,.9); backdrop-filter:blur(18px); }
+    .topbar-inner { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:800; text-decoration:none; letter-spacing:-.03em; }
+    .brand-mark { width:34px; height:34px; display:grid; place-items:center; border-radius:50%; color:white; background:var(--coral); font-size:16px; }
+    .top-actions { display:flex; align-items:center; gap:10px; }
+    .progress-pill { min-width:132px; padding:9px 13px; border:1px solid var(--line); border-radius:999px; background:var(--white); font-size:13px; font-weight:750; }
+    .progress-track { height:4px; margin-top:6px; overflow:hidden; border-radius:99px; background:var(--deep); }
+    .progress-fill { width:0; height:100%; border-radius:inherit; background:var(--coral); transition:width .25s ease; }
+    .emergency-link { padding:10px 14px; border-radius:999px; color:#fff; background:var(--forest); font-size:13px; font-weight:800; text-decoration:none; }
+    .hero { position:relative; overflow:hidden; padding:84px 0 64px; }
+    .hero::before { content:""; position:absolute; top:25px; right:-90px; width:360px; height:360px; border:1px solid rgba(227,107,77,.23); border-radius:50%; box-shadow:0 0 0 55px rgba(227,107,77,.05),0 0 0 110px rgba(227,107,77,.035); }
+    .hero-grid { position:relative; display:grid; grid-template-columns:1.15fr .85fr; gap:64px; align-items:end; }
+    .kicker { margin:0 0 20px; color:var(--coral); font-size:13px; font-weight:850; letter-spacing:.13em; }
+    h1 { max-width:790px; margin:0; font-size:clamp(46px,7.5vw,92px); line-height:.99; letter-spacing:-.075em; }
+    h1 em { color:var(--coral); font-style:normal; }
+    .hero-copy { max-width:570px; margin:30px 0 0; color:#56625e; font-size:clamp(17px,2vw,21px); line-height:1.75; word-break:keep-all; }
+    .hero-note { padding:26px; border:1px solid rgba(49,95,84,.17); border-radius:26px; background:var(--forest); color:white; transform:rotate(1.2deg); box-shadow:0 18px 45px rgba(49,95,84,.16); }
+    .hero-note small { display:block; margin-bottom:16px; color:#bcd5cd; font-weight:750; letter-spacing:.08em; }
+    .hero-note strong { display:block; font-family:Georgia,"Noto Serif JP",serif; font-size:27px; font-weight:600; line-height:1.35; }
+    .hero-note span { display:block; margin-top:9px; color:#dce9e3; line-height:1.6; }
+    .quick-start { padding:0 0 72px; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:24px; margin-bottom:24px; }
+    .section-kicker { margin:0 0 9px; color:var(--coral); font-size:12px; font-weight:850; letter-spacing:.12em; }
+    h2 { margin:0; font-size:clamp(30px,4vw,48px); line-height:1.1; letter-spacing:-.055em; }
+    .section-caption { max-width:420px; margin:0; color:var(--muted); line-height:1.7; word-break:keep-all; }
+    .quick-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .quick-card { min-height:195px; padding:22px; display:flex; flex-direction:column; justify-content:space-between; border:1px solid var(--line); border-radius:22px; background:var(--white); box-shadow:0 10px 30px rgba(60,51,40,.04); text-align:left; cursor:pointer; }
+    .quick-card:nth-child(2),.quick-card:nth-child(5) { background:var(--coral-soft); } .quick-card:nth-child(3) { background:var(--forest-soft); }
+    .quick-label { color:var(--muted); font-size:12px; font-weight:800; letter-spacing:.08em; }
+    .quick-jp { display:block; margin:18px 0 6px; font-family:Georgia,"Noto Serif JP",serif; font-size:25px; line-height:1.35; }
+    .quick-reading,.phrase-reading { color:var(--coral); font-size:14px; font-weight:750; }
+    .quick-meaning { display:block; margin:12px 0 0; color:#4f5a56; line-height:1.55; }
+    .guide { padding:64px 0; color:white; background:var(--forest); }
+    .guide-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:center; }
+    .guide h2 { max-width:390px; } .guide p { color:#c7dad4; line-height:1.75; }
+    .steps { display:grid; gap:2px; }
+    .step { display:grid; grid-template-columns:48px 1fr; gap:18px; padding:21px 0; border-bottom:1px solid rgba(255,255,255,.13); }
+    .step:last-child { border-bottom:0; }
+    .step-num { width:40px; height:40px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.32); border-radius:50%; color:var(--yellow); font-weight:850; }
+    .step strong { display:block; margin:2px 0 6px; font-size:19px; } .step span { color:#c7dad4; line-height:1.6; }
+    .curriculum { padding:82px 0 90px; }
+    .filter-panel { position:sticky; top:68px; z-index:15; margin:30px 0 28px; padding:13px; border:1px solid var(--line); border-radius:20px; background:rgba(255,253,249,.92); backdrop-filter:blur(18px); box-shadow:0 12px 34px rgba(56,47,36,.08); }
+    .search-row { display:grid; grid-template-columns:minmax(220px,1fr) auto; gap:10px; }
+    .search { width:100%; padding:13px 16px; border:1px solid var(--line); border-radius:13px; outline:none; background:#fff; }
+    .search:focus { border-color:var(--coral); box-shadow:0 0 0 3px rgba(227,107,77,.12); }
+    .show-all { padding:0 16px; border:0; border-radius:13px; color:white; background:var(--coral); font-weight:800; cursor:pointer; }
+    .journey-nav { display:flex; gap:8px; margin-top:10px; padding-bottom:1px; overflow-x:auto; scrollbar-width:thin; }
+    .journey-button { flex:0 0 auto; padding:9px 13px; border:1px solid var(--line); border-radius:999px; background:#fff; font-size:13px; font-weight:750; cursor:pointer; }
+    .journey-button:hover,.journey-button.active { color:white; border-color:var(--forest); background:var(--forest); }
+    .chapters { display:grid; gap:22px; }
+    .chapter { scroll-margin-top:170px; overflow:hidden; border:1px solid var(--line); border-radius:28px; background:var(--white); }
+    .chapter.hidden { display:none; }
+    .chapter-head { display:grid; grid-template-columns:82px 1fr auto; gap:22px; align-items:center; padding:28px 30px; border-bottom:1px solid var(--line); }
+    .chapter-no { color:var(--coral); font-family:Georgia,serif; font-size:38px; font-style:italic; }
+    .chapter-title { margin:0; font-size:clamp(23px,3vw,32px); letter-spacing:-.04em; }
+    .chapter-sub { margin:7px 0 0; color:var(--muted); line-height:1.55; }
+    .weight { padding:8px 11px; border-radius:999px; color:var(--forest); background:var(--forest-soft); font-size:12px; font-weight:850; white-space:nowrap; }
+    .phrase-list { display:grid; grid-template-columns:repeat(2,1fr); }
+    .phrase { position:relative; min-height:186px; padding:26px 70px 26px 30px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .phrase:nth-child(2n) { border-right:0; } .phrase:nth-last-child(-n+2) { border-bottom:0; } .phrase:nth-last-child(1):nth-child(odd) { grid-column:1/-1; border-right:0; }
+    .phrase-context { color:var(--muted); font-size:12px; font-weight:800; letter-spacing:.06em; }
+    .phrase-jp { margin:15px 0 7px; font-family:Georgia,"Noto Serif JP",serif; font-size:clamp(21px,2.5vw,28px); line-height:1.38; word-break:keep-all; }
+    .phrase-ko { margin:12px 0 0; color:#52605a; line-height:1.55; }
+    .phrase-actions { position:absolute; top:22px; right:20px; display:grid; gap:8px; }
+    .icon-button { width:38px; height:38px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; background:#fff; cursor:pointer; }
+    .icon-button:hover { border-color:var(--coral); background:var(--coral-soft); } .learn-button.done { color:white; border-color:var(--forest); background:var(--forest); }
+    .chapter-tip { display:flex; gap:12px; align-items:flex-start; padding:20px 30px; color:#5e5147; background:#fbf0dc; line-height:1.65; }
+    .tip-mark { flex:0 0 auto; color:#9f6917; font-weight:900; }
+    .focus { padding:72px 0; background:var(--deep); }
+    .focus-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; align-items:start; }
+    .focus-copy { position:sticky; top:110px; } .focus-copy p { color:var(--muted); line-height:1.75; }
+    .bars { display:grid; gap:17px; }
+    .bar-row { display:grid; grid-template-columns:130px 1fr 42px; gap:14px; align-items:center; }
+    .bar-label { font-weight:750; } .bar-track { height:12px; overflow:hidden; border-radius:99px; background:rgba(255,255,255,.72); }
+    .bar-fill { height:100%; border-radius:inherit; background:var(--coral); } .bar-row:nth-child(even) .bar-fill { background:var(--forest); }
+    .bar-value { color:var(--muted); font-size:13px; font-weight:800; }
+    .emergency { padding:88px 0; color:white; background:#273a35; }
+    .emergency-layout { display:grid; grid-template-columns:.72fr 1.28fr; gap:55px; align-items:start; }
+    .emergency .section-kicker { color:#f29a7f; } .emergency-intro { margin-top:22px; color:#c5d3ce; line-height:1.75; }
+    .call-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:28px; }
+    .call-card { padding:20px; border:1px solid rgba(255,255,255,.16); border-radius:18px; background:rgba(255,255,255,.06); }
+    .call-card strong { display:block; color:var(--yellow); font-family:Georgia,serif; font-size:36px; } .call-card span { color:#d6e1dd; }
+    .emergency-phrases { border-top:1px solid rgba(255,255,255,.16); }
+    .emergency-phrase { padding:20px 0; border-bottom:1px solid rgba(255,255,255,.16); }
+    .emergency-phrase strong { display:block; font-family:Georgia,"Noto Serif JP",serif; font-size:24px; font-weight:500; }
+    .emergency-phrase span { display:block; margin-top:7px; color:#f0aa95; font-size:14px; } .emergency-phrase p { margin:8px 0 0; color:#c5d3ce; }
+    footer { padding:42px 0 50px; color:var(--muted); background:var(--white); }
+    .footer-inner { display:flex; justify-content:space-between; gap:30px; align-items:center; } .footer-inner strong { color:var(--ink); }
+    .reset { padding:9px 13px; border:1px solid var(--line); border-radius:999px; background:transparent; cursor:pointer; }
+    .empty { display:none; padding:55px 24px; border:1px dashed var(--line); border-radius:24px; color:var(--muted); text-align:center; } .empty.visible { display:block; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    @media(max-width:820px) { .wrap{width:min(100% - 28px,720px)} .hero{padding-top:60px} .hero-grid,.guide-grid,.focus-grid,.emergency-layout{grid-template-columns:1fr;gap:36px} .hero-note{max-width:480px;transform:none} .quick-grid{grid-template-columns:repeat(2,1fr)} .section-head{display:block}.section-caption{margin-top:14px}.focus-copy{position:static} }
+    @media(max-width:620px) { .wrap{width:min(100% - 22px,560px)} .topbar-inner{min-height:62px}.brand span:last-child{display:none}.emergency-link{padding:9px 12px}.progress-pill{min-width:118px}.hero{padding:48px 0 46px}h1{font-size:clamp(44px,14vw,64px)}.hero::before{width:250px;height:250px}.quick-start,.curriculum{padding-bottom:58px}.quick-grid,.phrase-list,.call-grid{grid-template-columns:1fr}.quick-card{min-height:180px}.filter-panel{top:62px;margin-top:24px}.search-row{grid-template-columns:1fr auto}.show-all{padding:0 13px}.chapter-head{grid-template-columns:55px 1fr;gap:12px;padding:22px 18px}.chapter-no{font-size:30px}.weight{grid-column:2;justify-self:start}.phrase{min-height:174px;padding:23px 62px 23px 19px;border-right:0;border-bottom:1px solid var(--line)!important}.phrase:last-child{border-bottom:0!important}.phrase-actions{top:18px;right:14px}.chapter-tip{padding:18px}.bar-row{grid-template-columns:105px 1fr 36px;gap:9px;font-size:14px}.footer-inner{display:block}.reset{margin-top:18px} }
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap topbar-inner"><a class="brand" href="#top"><span class="brand-mark">旅</span><span>아이와 일본어</span></a><div class="top-actions"><div class="progress-pill" aria-live="polite"><span id="progressText">학습 0 / 57</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div><a class="emergency-link" href="#emergency">긴급 표현</a></div></div></header>
+  <main id="top">
+    <section class="hero"><div class="wrap hero-grid"><div><p class="kicker">3-YEAR-OLD · FAMILY TRAVEL PHRASEBOOK</p><h1>세 살 아이와,<br><em>말이 통하는</em><br>일본 여행</h1><p class="hero-copy">공항에서 유모차를 찾는 순간부터 식당에서 아이 의자를 부탁하고, 갑작스러운 열을 설명하는 순간까지. 여행 순서대로 필요한 말만 담았습니다.</p></div><aside class="hero-note" aria-label="오늘의 첫 표현"><small>먼저 이 문장부터</small><strong lang="ja">子どもは3歳です。</strong><span>코도모와 산사이데스<br>아이는 세 살이에요.</span></aside></div></section>
+    <section class="quick-start" aria-labelledby="quick-title"><div class="wrap"><div class="section-head"><div><p class="section-kicker">QUICK START</p><h2 id="quick-title">가장 먼저 외울 6문장</h2></div><p class="section-caption">완벽한 문법보다 짧고 또렷하게 말하는 것이 중요해요. 일본어 문장을 누르면 음성을 들을 수 있습니다.</p></div><div class="quick-grid" id="quickGrid"></div></div></section>
+    <section class="guide" aria-labelledby="guide-title"><div class="wrap guide-grid"><div><p class="section-kicker">HOW TO USE</p><h2 id="guide-title">길게 말하지 않아도 괜찮아요</h2><p>아이와 함께라면 문장을 떠올릴 시간이 더 부족합니다. 세 단계만 기억하면 대부분의 상황을 해결할 수 있어요.</p></div><div class="steps"><div class="step"><span class="step-num">1</span><div><strong>먼저 부르기</strong><span>「すみません」으로 상대의 주의를 부드럽게 끌어요.</span></div></div><div class="step"><span class="step-num">2</span><div><strong>한 문장만 말하기</strong><span>준비한 핵심 문장을 천천히 한 번 말해요.</span></div></div><div class="step"><span class="step-num">3</span><div><strong>가리켜 확인하기</strong><span>아이, 유모차, 메뉴를 가리키며 「これです」를 덧붙여요.</span></div></div></div></div></section>
+    <section class="curriculum" aria-labelledby="curriculum-title"><div class="wrap"><div class="section-head"><div><p class="section-kicker">TRAVEL JOURNEY</p><h2 id="curriculum-title">여행 순서대로 익히기</h2></div><p class="section-caption">표현을 들은 뒤 체크해 보세요. 학습 기록은 이 기기에 저장됩니다.</p></div><div class="filter-panel"><div class="search-row"><label><span class="sr-only">표현 검색</span><input id="searchInput" class="search" type="search" placeholder="예: 유모차, 맵지 않은, 병원"></label><button class="show-all" id="showAll" type="button">전체</button></div><nav class="journey-nav" id="journeyNav" aria-label="여행 단계"></nav></div><div class="chapters" id="chapters"></div><div class="empty" id="emptyState">찾는 표현이 아직 없어요. 다른 단어로 검색해 보세요.</div></div></section>
+    <section class="focus" aria-labelledby="focus-title"><div class="wrap focus-grid"><div class="focus-copy"><p class="section-kicker">STUDY PLAN</p><h2 id="focus-title">식사와 이동부터 집중하세요</h2><p>아이 동반 여행에서 자주 쓰는 상황을 기준으로 한 권장 학습 비중입니다. 짧게 준비한다면 식당, 교통, 호텔 표현부터 시작하세요.</p></div><div class="bars" aria-label="권장 학습 시간 배분"><div class="bar-row"><span class="bar-label">식당·음식</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">30%</span></div><div class="bar-row"><span class="bar-label">교통·길 찾기</span><div class="bar-track"><div class="bar-fill" style="width:67%"></div></div><span class="bar-value">20%</span></div><div class="bar-row"><span class="bar-label">호텔·편의</span><div class="bar-track"><div class="bar-fill" style="width:67%"></div></div><span class="bar-value">20%</span></div><div class="bar-row"><span class="bar-label">긴급 상황</span><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><span class="bar-value">15%</span></div><div class="bar-row"><span class="bar-label">쇼핑·관광</span><div class="bar-track"><div class="bar-fill" style="width:33%"></div></div><span class="bar-value">10%</span></div><div class="bar-row"><span class="bar-label">공항·기타</span><div class="bar-track"><div class="bar-fill" style="width:17%"></div></div><span class="bar-value">5%</span></div></div></div></section>
+    <section class="emergency" id="emergency" aria-labelledby="emergency-title"><div class="wrap emergency-layout"><div><p class="section-kicker">KEEP THIS SCREEN</p><h2 id="emergency-title">긴급할 때는<br>화면을 보여주세요</h2><p class="emergency-intro">짧고 정확하게 증상과 아이의 나이를 말하세요. 생명이 위급한 상황에서는 숙소 직원이나 주변 사람에게 즉시 도움을 요청하세요.</p><div class="call-grid"><div class="call-card"><strong>119</strong><span>구급차·화재</span></div><div class="call-card"><strong>110</strong><span>경찰·사고</span></div></div></div><div class="emergency-phrases"><div class="emergency-phrase"><strong lang="ja">救急車を呼んでください。</strong><span>큐우큐우샤오 욘데 쿠다사이</span><p>구급차를 불러 주세요.</p></div><div class="emergency-phrase"><strong lang="ja">子どもが熱を出しています。</strong><span>코도모가 네츠오 다시테이마스</span><p>아이가 열이 나요.</p></div><div class="emergency-phrase"><strong lang="ja">何度も吐いています。</strong><span>난도모 하이테이마스</span><p>여러 번 토하고 있어요.</p></div><div class="emergency-phrase"><strong lang="ja">夜、診てもらえる小児科はありますか？</strong><span>요루, 미테 모라에루 쇼오니카와 아리마스카</span><p>밤에 진료받을 수 있는 소아과가 있나요?</p></div></div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><div><strong>아이와 함께하는 일본 여행 일본어</strong><br><small>여행 전에는 천천히 익히고, 여행 중에는 검색해서 바로 보여주세요.</small></div><button class="reset" id="resetProgress" type="button">학습 기록 초기화</button></div></footer>
+  <script>
+    const chapters = [
+      {no:"01",short:"준비",title:"여행 전 준비하기",sub:"인사, 숫자, 인원과 아이의 나이",weight:"기본 5분",tip:"숫자는 손가락으로 함께 보여주면 더 정확하게 전달할 수 있어요.",phrases:[["기본 인사","すみません。","스미마센","실례합니다 / 저기요."],["감사","ありがとうございます。","아리가토오 고자이마스","감사합니다."],["아이 나이","子どもは3歳です。","코도모와 산사이데스","아이는 세 살이에요."],["인원","大人2人と子ども1人です。","오토나 후타리토 코도모 히토리데스","어른 두 명과 아이 한 명이에요."],["시간","何時からですか？","난지카라데스카","몇 시부터인가요?"]]},
+      {no:"02",short:"공항",title:"공항에서 출국·입국하기",sub:"기내 요청, 입국심사와 유모차 찾기",weight:"필수 5%",tip:"유모차에는 영문 이름표와 연락처를 붙이고, 위탁 전 수령 장소를 꼭 확인하세요.",phrases:[["기내 물","子どもの水をいただけますか？","코도모노 미즈오 이타다케마스카","아이에게 줄 물을 받을 수 있을까요?"],["유아식","子ども用の食事はありますか？","코도모요오노 쇼쿠지와 아리마스카","아이용 식사가 있나요?"],["담요","毛布を1枚いただけますか？","모오후오 이치마이 이타다케마스카","담요 한 장을 받을 수 있을까요?"],["입국 목적","家族旅行です。4日間滞在します。","카조쿠료코오데스, 욧카칸 타이자이시마스","가족 여행이며 4일간 머뭅니다."],["유모차 수령","ベビーカーはどこで受け取れますか？","베비이카아와 도코데 우케토레마스카","유모차는 어디에서 받을 수 있나요?"],["수하물","この荷物が出てきません。","코노 니모츠가 데테키마센","이 짐이 나오지 않아요."]]},
+      {no:"03",short:"교통",title:"교통수단 이용하기",sub:"전철, 버스, 택시와 유모차 이동",weight:"집중 20%",tip:"출퇴근 시간에는 붐비므로 엘리베이터 위치와 환승 동선을 먼저 확인하면 좋아요.",phrases:[["길 찾기","駅はどちらですか？","에키와 도치라데스카","역은 어느 쪽인가요?"],["전철","この電車は東京駅に行きますか？","코노 덴샤와 토오쿄오에키니 이키마스카","이 전철은 도쿄역에 가나요?"],["엘리베이터","エレベーターはどこですか？","에레베에타아와 도코데스카","엘리베이터는 어디에 있나요?"],["유모차 길","ベビーカーで通れる道はどこですか？","베비이카아데 토오레루 미치와 도코데스카","유모차로 갈 수 있는 길은 어디인가요?"],["어린이 요금","3歳の子どもも料金がかかりますか？","산사이노 코도모모 료오킨가 카카리마스카","세 살 아이도 요금이 있나요?"],["택시","この住所までお願いします。","코노 주우쇼마데 오네가이시마스","이 주소까지 부탁합니다."]]},
+      {no:"04",short:"호텔",title:"호텔에서 숙박하기",sub:"체크인, 아이용품과 객실 문제",weight:"집중 20%",tip:"침대 가드와 아기 침대는 수량이 적을 수 있으니 가능하면 숙박 전에 요청하세요.",phrases:[["체크인","予約したイ・ユンヘです。","요야쿠시타 이 윤혜데스","예약한 이윤혜입니다."],["침대 가드","ベッドガードを借りられますか？","벳도 가아도오 카리라레마스카","침대 가드를 빌릴 수 있나요?"],["아기 침대","ベビーベッドはありますか？","베비이 벳도와 아리마스카","아기 침대가 있나요?"],["아이 수건","子ども用のタオルをもう1枚ください。","코도모요오노 타오루오 모오 이치마이 쿠다사이","아이용 수건 한 장 더 주세요."],["객실 문제","部屋が寒いです。確認してください。","헤야가 사무이데스, 카쿠닌시테 쿠다사이","방이 추워요. 확인해 주세요."],["체크아웃","チェックアウトをお願いします。","쳇쿠아우토오 오네가이시마스","체크아웃 부탁합니다."]]},
+      {no:"05",short:"식당",title:"식당에서 식사하기",sub:"아이 의자, 순한 메뉴, 알레르기와 포장",weight:"최우선 30%",tip:"알레르기가 있다면 원재료 이름을 일본어로 적은 메모를 함께 보여주세요.",phrases:[["입장","大人2人と子ども1人です。","오토나 후타리토 코도모 히토리데스","어른 두 명과 아이 한 명이에요."],["아이 의자","子ども用の椅子はありますか？","코도모요오노 이스와 아리마스카","아이용 의자가 있나요?"],["아이 식기","子ども用の食器をください。","코도모요오노 쇽키오 쿠다사이","아이용 식기를 주세요."],["순한 메뉴","辛くない料理はありますか？","카라쿠나이 료오리와 아리마스카","맵지 않은 음식이 있나요?"],["알레르기","この料理に卵は入っていますか？","코노 료오리니 타마고와 하잇테이마스카","이 음식에 달걀이 들어 있나요?"],["나눠 먹기","子どもと分けます。取り皿をください。","코도모토 와케마스, 토리자라오 쿠다사이","아이와 나눠 먹을게요. 앞접시를 주세요."],["포장","残りを持ち帰れますか？","노코리오 모치카에레마스카","남은 음식을 포장할 수 있나요?"]]},
+      {no:"06",short:"쇼핑",title:"쇼핑하기",sub:"기저귀, 물티슈와 아이용품 찾기",weight:"선택 10%",tip:"기저귀는 일본 브랜드별로 크기가 다를 수 있어 아이의 몸무게 표기를 함께 확인하세요.",phrases:[["기저귀","子ども用のおむつはどこですか？","코도모요오노 오무츠와 도코데스카","아이용 기저귀는 어디에 있나요?"],["물티슈","おしりふきはありますか？","오시리후키와 아리마스카","아기 물티슈가 있나요?"],["크기","このサイズより大きいものはありますか？","코노 사이즈요리 오오키이 모노와 아리마스카","이 사이즈보다 큰 것이 있나요?"],["재고","これは在庫がありますか？","코레와 자이코가 아리마스카","이것은 재고가 있나요?"],["교환","サイズが合いません。交換できますか？","사이즈가 아이마센, 코오칸 데키마스카","사이즈가 맞지 않아요. 교환할 수 있나요?"]]},
+      {no:"07",short:"관광",title:"관광 및 아이와 외출하기",sub:"사진, 수유실, 기저귀 교환대와 입장",weight:"선택 10%",tip:"시설마다 유모차 반입 규정이 달라요. 입구에서 보관 장소를 먼저 물어보세요.",phrases:[["사진","家族の写真を撮っていただけますか？","카조쿠노 샤신오 톳테 이타다케마스카","가족사진을 찍어 주실 수 있나요?"],["기저귀 교환","おむつを替えられる場所はありますか？","오무츠오 카에라레루 바쇼와 아리마스카","기저귀를 갈 수 있는 곳이 있나요?"],["수유실","授乳室はどこですか？","주뉴우시츠와 도코데스카","수유실은 어디인가요?"],["유모차 반입","ベビーカーで入ってもいいですか？","베비이카아데 하잇테모 이이데스카","유모차를 가지고 들어가도 되나요?"],["유모차 보관","ベビーカーを預けられますか？","베비이카아오 아즈케라레마스카","유모차를 맡길 수 있나요?"],["이용 연령","3歳の子どもも利用できますか？","산사이노 코도모모 리요오 데키마스카","세 살 아이도 이용할 수 있나요?"]]},
+      {no:"08",short:"편의",title:"여행 중 편의시설 이용하기",sub:"화장실, 편의점과 아이가 쓸 수 있는 시설",weight:"기본 5분",tip:"일본에서 다목적 화장실은 「多目的トイレ」로 표시되며 기저귀 교환대가 있는 경우가 많아요.",phrases:[["화장실","一番近いトイレはどこですか？","이치방 치카이 토이레와 도코데스카","가장 가까운 화장실은 어디인가요?"],["다목적 화장실","多目的トイレはありますか？","타모쿠테키 토이레와 아리마스카","다목적 화장실이 있나요?"],["편의점","近くにコンビニはありますか？","치카쿠니 콘비니와 아리마스카","근처에 편의점이 있나요?"],["뜨거운 물","子ども用にお湯をいただけますか？","코도모요오니 오유오 이타다케마스카","아이용으로 뜨거운 물을 받을 수 있나요?"],["ATM","海外のカードが使えるATMはありますか？","카이가이노 카아도가 츠카에루 에이티이에무와 아리마스카","해외 카드가 되는 ATM이 있나요?"]]},
+      {no:"09",short:"긴급",title:"긴급 상황 대처하기",sub:"발열, 구토, 소아과와 미아 상황",weight:"필수 15%",tip:"진료 시 여권, 여행자보험 정보, 복용 중인 약과 알레르기 메모를 함께 준비하세요.",phrases:[["발열","子どもが熱を出しています。","코도모가 네츠오 다시테이마스","아이가 열이 나요."],["구토","何度も吐いています。","난도모 하이테이마스","여러 번 토하고 있어요."],["설사","朝から下痢をしています。","아사카라 게리오 시테이마스","아침부터 설사를 하고 있어요."],["소아과","近くに小児科はありますか？","치카쿠니 쇼오니카와 아리마스카","근처에 소아과가 있나요?"],["야간 진료","夜、診てもらえる病院はありますか？","요루, 미테 모라에루 뵤오인와 아리마스카","밤에 진료받을 수 있는 병원이 있나요?"],["미아","3歳の子どもがいなくなりました。","산사이노 코도모가 이나쿠 나리마시타","세 살 아이를 잃어버렸어요."]]},
+      {no:"10",short:"귀국",title:"귀국하기",sub:"체크인과 유모차·수하물 위탁",weight:"마무리 5분",tip:"탑승구까지 유모차를 사용할 계획이라면 체크인 카운터에서 먼저 요청하세요.",phrases:[["체크인","この便のチェックインカウンターはどこですか？","코노 빈노 쳇쿠인 카운타아와 도코데스카","이 항공편 체크인 카운터는 어디인가요?"],["유모차 사용","搭乗口までベビーカーを使えますか？","토오죠오구치마데 베비이카아오 츠카에마스카","탑승구까지 유모차를 사용할 수 있나요?"],["유모차 위탁","このベビーカーを預けたいです。","코노 베비이카아오 아즈케타이데스","이 유모차를 맡기고 싶어요."],["수하물","この荷物を預けたいです。","코노 니모츠오 아즈케타이데스","이 짐을 부치고 싶어요."],["탑승구","搭乗口はどこですか？","토오죠오구치와 도코데스카","탑승구는 어디인가요?"]]}
+    ];
+    const quick=[["아이 나이","子どもは3歳です。","코도모와 산사이데스","아이는 세 살이에요."],["아이 의자","子ども用の椅子はありますか？","코도모요오노 이스와 아리마스카","아이용 의자가 있나요?"],["유모차","ベビーカーで入ってもいいですか？","베비이카아데 하잇테모 이이데스카","유모차로 들어가도 되나요?"],["기저귀","おむつを替えられる場所はありますか？","오무츠오 카에라레루 바쇼와 아리마스카","기저귀를 갈 곳이 있나요?"],["순한 음식","辛くない料理はありますか？","카라쿠나이 료오리와 아리마스카","맵지 않은 음식이 있나요?"],["발열","子どもが熱を出しています。","코도모가 네츠오 다시테이마스","아이가 열이 나요."]];
+    const STORAGE_KEY="jpn-family-travel-progress-v1"; let learned=new Set(JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]")); let activeChapter="all";
+    function speakJapanese(text){if(!("speechSynthesis" in window))return;window.speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang="ja-JP";utterance.rate=.82;window.speechSynthesis.speak(utterance)}
+    function escapeText(value){return value.replace(/[&<>\"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;","'":"&#039;"})[char])}
+    function renderQuick(){document.getElementById("quickGrid").innerHTML=quick.map((item,index)=>`<button class="quick-card" type="button" data-speak="${escapeText(item[1])}" aria-label="${escapeText(item[1])} 음성 듣기"><span class="quick-label">0${index+1} · ${item[0]}</span><span><strong class="quick-jp" lang="ja">${item[1]}</strong><span class="quick-reading">${item[2]} · 🔊</span><span class="quick-meaning">${item[3]}</span></span></button>`).join("")}
+    function renderNav(){document.getElementById("journeyNav").innerHTML=chapters.map(chapter=>`<button type="button" class="journey-button" data-filter="${chapter.no}">${chapter.no} ${chapter.short}</button>`).join("")}
+    function renderChapters(){document.getElementById("chapters").innerHTML=chapters.map(chapter=>`<article class="chapter" id="chapter-${chapter.no}" data-chapter="${chapter.no}" data-search="${escapeText([chapter.title,chapter.sub,...chapter.phrases.flat()].join(" ").toLowerCase())}"><header class="chapter-head"><span class="chapter-no">${chapter.no}</span><div><h3 class="chapter-title">${chapter.title}</h3><p class="chapter-sub">${chapter.sub}</p></div><span class="weight">${chapter.weight}</span></header><div class="phrase-list">${chapter.phrases.map((phrase,index)=>{const id=`${chapter.no}-${index}`;return `<div class="phrase"><span class="phrase-context">${phrase[0]}</span><p class="phrase-jp" lang="ja">${phrase[1]}</p><span class="phrase-reading">${phrase[2]}</span><p class="phrase-ko">${phrase[3]}</p><div class="phrase-actions"><button class="icon-button" type="button" data-speak="${escapeText(phrase[1])}" aria-label="일본어 음성 듣기">🔊</button><button class="icon-button learn-button ${learned.has(id)?"done":""}" type="button" data-learn="${id}" aria-label="학습 완료 표시">✓</button></div></div>`}).join("")}</div><div class="chapter-tip"><span class="tip-mark">TIP</span><span>${chapter.tip}</span></div></article>`).join("")}
+    function updateProgress(){const total=chapters.reduce((sum,chapter)=>sum+chapter.phrases.length,0);document.getElementById("progressText").textContent=`학습 ${learned.size} / ${total}`;document.getElementById("progressFill").style.width=`${Math.round(learned.size/total*100)}%`}
+    function applyFilter(){const query=document.getElementById("searchInput").value.trim().toLowerCase();let visible=0;document.querySelectorAll(".chapter").forEach(chapter=>{const chapterMatch=activeChapter==="all"||chapter.dataset.chapter===activeChapter;const searchMatch=!query||chapter.dataset.search.includes(query);chapter.classList.toggle("hidden",!(chapterMatch&&searchMatch));if(chapterMatch&&searchMatch)visible++});document.getElementById("emptyState").classList.toggle("visible",visible===0)}
+    renderQuick();renderNav();renderChapters();updateProgress();
+    document.addEventListener("click",event=>{const speakButton=event.target.closest("[data-speak]");if(speakButton)speakJapanese(speakButton.dataset.speak);const learnButton=event.target.closest("[data-learn]");if(learnButton){const id=learnButton.dataset.learn;learned.has(id)?learned.delete(id):learned.add(id);learnButton.classList.toggle("done",learned.has(id));localStorage.setItem(STORAGE_KEY,JSON.stringify([...learned]));updateProgress()}const filterButton=event.target.closest("[data-filter]");if(filterButton){activeChapter=activeChapter===filterButton.dataset.filter?"all":filterButton.dataset.filter;document.querySelectorAll(".journey-button").forEach(button=>button.classList.toggle("active",button.dataset.filter===activeChapter));applyFilter();document.getElementById("curriculum-title").scrollIntoView({behavior:"smooth",block:"start"})}});
+    document.getElementById("searchInput").addEventListener("input",applyFilter);document.getElementById("showAll").addEventListener("click",()=>{activeChapter="all";document.getElementById("searchInput").value="";document.querySelectorAll(".journey-button").forEach(button=>button.classList.remove("active"));applyFilter()});document.getElementById("resetProgress").addEventListener("click",()=>{learned.clear();localStorage.removeItem(STORAGE_KEY);document.querySelectorAll(".learn-button").forEach(button=>button.classList.remove("done"));updateProgress()});
+  </script>
+</body>
 </html>
